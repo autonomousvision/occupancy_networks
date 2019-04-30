@@ -1,0 +1,5 @@
+inherit_from: configs/pointcloud/onet.yaml
+test:
+  model_file: https://s3.eu-central-1.amazonaws.com/avg-projects/occupancy_networks/models/onet_pcl2mesh-5c0be168.pt
+generation:
+  generation_dir: pretrained

@@ -1,0 +1,50 @@
+method: dmc
+data:
+  input_type: pointcloud
+  path: data/ShapeNet
+  pointcloud_n: 300
+  pointcloud_noise: 0.005
+model:
+  encoder_latent: simple
+  decoder: unet
+  encoder: pointnet_local
+  decoder_kwargs:
+    input_dim: 16
+    skip_connection: True
+    T: 256
+    W: 32
+    H: 32
+    D: 32
+  encoder_kwargs:
+    out_dim: 16
+    cell_W: 32
+    cell_H: 32
+    cell_D: 32
+  c_dim: 256
+  z_dim: 0
+  num_voxels: 32
+  dmc_weight_prior: 5.
+training:
+  out_dir:  out/pointcloud/dmc
+  batch_size: 8
+  print_every: 10
+  visualize_every: 2000 
+  checkpoint_every: 500 
+  validate_every: 2000 
+  backup_every: 10000
+  eval_sample: false
+  model_selection_metric: loss
+  model_selection_mode: minimize
+test:
+  threshold: 0.5
+  eval_mesh: true
+  eval_pointcloud: false 
+  model_file: model_best.pt
+generation:
+  dataset: same
+  batch_size: 100000
+  refinement_step: 0
+  # vis_n_outputs: 16
+  generate_mesh: true
+  generate_pointcloud: true
+  generation_dir: generation

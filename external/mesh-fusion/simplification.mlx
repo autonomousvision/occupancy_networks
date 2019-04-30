@@ -1,0 +1,17 @@
+<!DOCTYPE FilterScript>
+<FilterScript>
+ <filter name="Simplification: Quadric Edge Collapse Decimation">
+  <Param type="RichInt" value="5000" name="TargetFaceNum"/>
+  <Param type="RichFloat" value="0" name="TargetPerc"/>
+  <Param type="RichFloat" value="0.5" name="QualityThr"/>
+  <Param type="RichBool" value="false" name="PreserveBoundary"/>
+  <Param type="RichFloat" value="1" name="BoundaryWeight"/>
+  <Param type="RichBool" value="true" name="PreserveNormal"/>
+  <Param type="RichBool" value="false" name="PreserveTopology"/>
+  <Param type="RichBool" value="true" name="OptimalPlacement"/>
+  <Param type="RichBool" value="true" name="PlanarQuadric"/>
+  <Param type="RichBool" value="false" name="QualityWeight"/>
+  <Param type="RichBool" value="true" name="AutoClean"/>
+  <Param type="RichBool" value="false" name="Selected"/>
+ </filter>
+</FilterScript>
