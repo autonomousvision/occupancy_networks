@@ -54,7 +54,7 @@ Moreover, the script creates a `demo/generation/vis` folder where both inputs an
 ## Dataset
 
 To evaluate a pretrained model or train a new model from scratch, you have to obtain the dataset.
-To this end, there are to options:
+To this end, there are two options:
 
 1. you can download our preprocessed data
 2. you can download the ShapeNet dataset and run the preprocessing pipeline yourself
