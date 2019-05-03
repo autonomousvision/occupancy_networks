@@ -154,6 +154,12 @@ where you replace `OUTPUT_DIR` with the respective output directory.
 
 For available training options, please take a look at `configs/default.yaml`.
 
+# Notes
+* In our paper we used random crops and scaling to augment the input images. 
+  However, we later found that this image augmentation decreases performance on the ShapeNet test set.
+  The pretrained model that is loaded in `configs/img/onet_pretrained.yaml` was hence trained without data augmentation and has slightly better performance than the model from the paper.
+  For completeness, we also provide the trained weights for the model which was used in the paper in  `configs/img/onet_legacy_pretrained.yaml`.
+
 # Futher Information
 Please also check out the following concurrent papers that have proposed similar ideas:
 * [Park et al. - DeepSDF: Learning Continuous Signed Distance Functions for Shape Representation (2019)](https://arxiv.org/abs/1901.05103)
