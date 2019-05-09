@@ -37,9 +37,6 @@ class PSGNPreprocessor:
         with torch.no_grad():
             points = self.model(inputs)
 
-        export_pointcloud(points.squeeze(0).cpu().numpy(),
-                          '/is/sg/lmescheder/Desktop/points.ply')
-
         batch_size = points.size(0)
         T = points.size(1)
 
