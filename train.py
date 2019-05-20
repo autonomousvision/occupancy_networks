@@ -12,7 +12,7 @@ from im2mesh.checkpoints import CheckpointIO
 
 # Arguments
 parser = argparse.ArgumentParser(
-    description='Train an occupancy process.'
+    description='Train a 3D reconstruction model.'
 )
 parser.add_argument('config', type=str, help='Path to config file.')
 parser.add_argument('--no-cuda', action='store_true', help='Do not use cuda.')
