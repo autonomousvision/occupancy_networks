@@ -147,7 +147,13 @@ class PointsField(Field):
         file_path = os.path.join(model_path, self.file_name)
 
         points_dict = np.load(file_path)
-        points = points_dict['points'].astype(np.float32)
+        points = points_dict['points']
+        # Break symmetry if given in float16:
+        if points.dtype == np.float16:
+            points = points.astype(np.float32)
+            points += 1e-4 * np.random.randn(*points.shape)
+        else:
+            points = points.astype(np.float32)
 
         occupancies = points_dict['occupancies']
         if self.unpackbits:
