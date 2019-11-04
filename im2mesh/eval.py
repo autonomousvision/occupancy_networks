@@ -112,10 +112,11 @@ class MeshEvaluator(object):
         accuracy_normals = accuracy_normals.mean()
 
         # Chamfer distance
-        chamfer = completeness2 + accuracy2
+        chamferL2 = 0.5 * (completeness2 + accuracy2)
         normals_correctness = (
             0.5 * completeness_normals + 0.5 * accuracy_normals
         )
+        chamferL1 = 0.5 * (completeness + accuracy)
 
         out_dict = {
             'completeness': completeness,
@@ -125,7 +126,8 @@ class MeshEvaluator(object):
             'normals': normals_correctness,
             'completeness2': completeness2,
             'accuracy2': accuracy2,
-            'chamfer': chamfer,
+            'chamfer-L2': chamferL2,
+            'chamfer-L1': chamferL1,
         }
 
         return out_dict
