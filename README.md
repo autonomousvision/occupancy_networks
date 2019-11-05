@@ -74,7 +74,7 @@ This script should download and unpack the data automatically into the `data/Sha
 Alternatively, you can also preprocess the dataset yourself.
 To this end, you have to follow the following steps:
 * download the [ShapeNet dataset v1](https://www.shapenet.org/) and put into `data/external/ShapeNet`. 
-* download the [renderings](ftp://cs.stanford.edu/cs/cvgl/ShapeNetRendering.tgz) and [voxelizations](ftp://cs.stanford.edu/cs/cvgl/ShapeNetVox32.tgz) from Choy et al. 2016 and unpack them in `data/external/Choy2016` 
+* download the [renderings and voxelizations](http://3d-r2n2.stanford.edu/) from Choy et al. 2016 and unpack them in `data/external/Choy2016` 
 * build our modified version of [mesh-fusion](https://github.com/davidstutz/mesh-fusion) by following the instructions in the `external/mesh-fusion` folder
 
 You are now ready to build the dataset:
