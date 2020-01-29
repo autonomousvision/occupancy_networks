@@ -83,7 +83,7 @@ def get_data_fields(mode, cfg):
         cfg['data']['pointcloud_n'])
     fields = {}
     fields['pointcloud'] = data.PointCloudField(
-        cfg['data']['pointcloud_file'], pointcloud_transform,
+        cfg['data']['pointcloud_target_n'], pointcloud_transform,
         with_transforms=with_transforms)
 
     return fields
