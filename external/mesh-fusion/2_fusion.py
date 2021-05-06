@@ -38,7 +38,7 @@ class Fusion:
             self.options.focal_length_x,
             self.options.focal_length_y,
             self.options.principal_point_x,
-            self.options.principal_point_x
+            self.options.principal_point_y,
         ], dtype=float)
         # Essentially the same as above, just a slightly different format.
         self.fusion_intrisics = np.array([
