@@ -140,7 +140,7 @@ class Resnet101(nn.Module):
         super().__init__()
         self.normalize = normalize
         self.use_linear = use_linear
-        self.features = models.resnet50(pretrained=True)
+        self.features = models.resnet101(pretrained=True)
         self.features.fc = nn.Sequential()
         if use_linear:
             self.fc = nn.Linear(2048, c_dim)
