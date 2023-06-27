@@ -22,6 +22,7 @@ pykdtree = Extension(
     language='c',
     extra_compile_args=['-std=c99', '-O3', '-fopenmp'],
     extra_link_args=['-lgomp'],
+    include_dirs=[numpy_include_dir]
 )
 
 # mcubes (marching cubes algorithm)
